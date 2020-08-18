@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="$(SolutionDir)SharpMap.Common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <Product>Example Code Snipplets</Product>
+        <Copyright>Copyright 2008-2019 SharpMap - Team</Copyright>
+        <PackageTags>sharpmap</PackageTags>
+        <ApplicationIcon />
+        <OutputType>Library</OutputType>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <PlatformTarget>AnyCPU</PlatformTarget>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="System.Windows.Forms" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ProjNet4GeoAPI" Version="1.4.1" />
+        <PackageReference Include="NUnit" Version="3.12.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\SharpMap.Extensions\SharpMap.Extensions.csproj" />
+        <ProjectReference Include="..\..\SharpMap\SharpMap.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="My Project\Settings.settings">
+        <Generator>SettingsSingleFileGenerator</Generator>
+      </None>
+    </ItemGroup>
+
+
+</Project>
